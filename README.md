@@ -16,5 +16,6 @@ npm start
 
 ## To package as a standalone app
 ```
+# output to release-builds folder
 electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds
 ```
