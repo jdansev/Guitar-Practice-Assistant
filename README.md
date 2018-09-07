@@ -2,7 +2,7 @@
 
 An electron based app developed as a virtual training tool for guitarists.
 
-## To Use
+## To use
 ```
 # clone this repository
 git clone https://github.com/jdansev/Guitar-Practice-Assistant
@@ -14,7 +14,7 @@ npm install
 npm start
 ```
 
-# Package as a Standalone App
+## To package as a standalone app
 ```
 electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds
 ```
