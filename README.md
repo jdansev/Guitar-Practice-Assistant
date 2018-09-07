@@ -1,6 +1,6 @@
 # Guitar Practice Assistant
 
-An electron based, virtual training tool for guitarists.
+An electron-based virtual training tool for guitarists.
 
 ![alt text](./demo.png)
 
