@@ -13,3 +13,8 @@ npm install
 # run it
 npm start
 ```
+
+# Package as a Standalone App
+```
+electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds
+```
