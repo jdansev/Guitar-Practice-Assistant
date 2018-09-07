@@ -2,6 +2,8 @@
 
 An electron based app developed as a virtual training tool for guitarists.
 
+![alt text](./demo.png)
+
 ## To use
 ```
 # clone this repository
