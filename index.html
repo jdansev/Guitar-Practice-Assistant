@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" style="-webkit-app-region: drag">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+	<!-- Insert this line above script imports  -->
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	<!-- Insert this line after script imports -->
+	<script>if (window.module) module = window.module;</script>
+
+	<script type="text/javascript" src="js/raphael.js"></script>
+	<script type="text/javascript" src="js/raphael.chord.js"></script>
+	<script src="js/index.js"></script>
+
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+	<h1 class="title">Music Practice Assistant</h1>
+
+	<div class="output">
+		<table>
+			<tr>
+				<th>Note</th>
+				<th>Mode</th>
+				<th>Root Position</th>
+			</tr>
+			<tr>
+				<td id="note-output">A</td>
+				<td id="chord-output">Harmonic</td>
+				<td id="root-position-output">3rd String</td>
+			</tr>
+		</table>
+	</div>
+
+	<p class="text">Press space to select a new random combination</p>
+
+	<div id="chord-div"></div>
+
+	<div class="show-input-options-container">
+		<div id="show-input-options" onclick="toggle_show_input_options()">Show Options ▸</div>
+	</div>
+
+	<div class="input">
+
+		<div class="radio-btn-div">
+			<input type="radio" id="radio-btn-chords" name='chords' onclick="load_data(this); this.blur();"> Chords</label>
+			<input type="radio" id="radio-btn-scales" name='scales' onclick="load_data(this); this.blur();"> Scales</label>
+			<input type="radio" id="radio-btn-custom" name='custom' onclick="load_data(this); this.blur();"> Custom</label>
+		</div>
+
+		<div class="default-btn-div">
+			<button id="edit-disabled-btn" class="default-btn" onclick="edit_disabled();">Edit Disabled</button>
+			<button id="load-default-btn" class="default-btn" onclick="load_default();">Reset</button>
+		</div>
+		
+
+		<p id="error-message"></p>
+
+		<div class="input-group">
+
+			<div class="temp">
+				<table id="note-table"></table>
+				<button class="add-btn" onclick="note_table.addRow('');">+ Add</button>
+			</div>
+
+		</div>
+
+		<div class="input-group">
+
+			<div class="temp">
+				<table id="chord-table"></table></table>
+				<button class="add-btn" onclick="chord_table.addRow('');">+ Add</button>
+			</div>
+			
+
+		</div>
+
+		<div class="input-group">
+
+			<div class="temp">
+				<table id="root-position-table"></table>
+				<button class="add-btn" onclick="root_position_table.addRow('');">+ Add</button>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
